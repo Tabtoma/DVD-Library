@@ -1,0 +1,253 @@
+<!-- 
+This page is used to get the membership page, email submission has been used in this page,
+when user presses the "members", microsoft outlook will be opened in which
+all the entered values will be there.
+This page will capture all the details of new member, and finally it will be submitted via email.
+In this page a dropdown combo has been used in "Occupation" field.
+In this page a radio option button has been used in "Preferred Contact Method" field.
+If user presses reset button, all the values will be cleared and page will not be submitted.
+In this page you will get left and right panel showing some information. Hyperlinks and video are shown in this page.
+external custom css "Style.css" has been used in this page
+-->
+<!DOCTYPE html>
+<html lang = "en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+   <title>Welcome - Video Library</title>
+   <meta charset = "utf-8" />
+   <link href = "css/style.css" rel = "stylesheet" type = "text/css" />      
+</head>
+<body>
+   <div id = "wrapper">    
+      <!-- following loads the navigation and sets the correct button as the current page -->
+      <header>
+   <img src = "imgs/dvd.jpg" alt = "Image of DVD" height = "125" width="250" />
+   <h1>Video Library - Membership</h1>     
+<nav>
+   <ul>
+      <li><a id ="indexNav" href = "index.html">Home</a></li>
+      <li><a id ="contactNav" href = "contact.html">Contact</a></li>
+      <li><a id ="profitNav" href = "profit.html?mode=salesreport">Profit Page</a></li>
+      <li><a id ="membershipNav" href = "membership.html">Membership</a></li>
+      </ul>
+</nav>  
+</header>       <script type = "text/javascript">
+          document.getElementById("membershipNav").className = "currentpage";  
+      </script> 
+      <div id = "leftcol">
+         <h2> New Videos</h2>
+         <fieldset>
+       <legend>The Equalizer</legend>
+       <img class='videoPoster' src='imgs/videos/1436255761Equalizer.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Thriller<br>
+       <span class='videoHeading'>Director: </span>Antoine Fuqua<br>
+       <span class='videoHeading'>Classification: </span>MA<br>
+       <span class='videoBold'>Starring: </span>Denzel Washington, Marton Csokas, Chloe Grace Moretz and Bill Pullman.
+       <p><span class='videoBold'>What do you see when you look at me? </span></p>
+       <p>A man believes he has put his mysterious past behind him and has dedicated himself to beginning a new, quiet life. But when he meets a young girl under the control of ultra-violent Russian gangsters, he can't stand idly by - he has to help her.</p>
+       </fieldSet><br><br><fieldset>
+       <legend>Edge of Tomorrow</legend>
+       <img class='videoPoster' src='imgs/videos/125075252edgeoftomorrow.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Action<br>
+       <span class='videoHeading'>Director: </span>Doug Liman<br>
+       <span class='videoHeading'>Classification: </span>M<br>
+       <span class='videoBold'>Starring: </span>Tom Cruise, Emily Blunt, Brendan Gleeson, Jonas Armstrong and Tony Way.
+       <p><span class='videoBold'>Live, Die, Repeat </span></p>
+       <p>A military officer is brought into an alien war against an extraterrestrial enemy who can reset the day and know the future. When this officer is enabled with the same power, he teams up with a Special Forces warrior to try and end the war.</p>
+       </fieldSet>      </div>
+      <div id = "rightcol">
+         <!--
+The form HTML for the membership page
+-->
+<h2>Sign-up now and search your videos on-line!</h2>  
+  <div id = "compnote">
+     <p>* = Compulsory field</p>
+  </div>   
+  <form id="membershipform" method="POST" action="mailto:email@example.com" enctype="text/plain>
+     <fieldset id="formnameandemail">
+        <legend>Name</legend>
+        <div> <!-- simply holds names apart -->
+           <label for="surnames">Surname:</label>
+           <input type="text" name="surname" id="surname" size = "50" maxlength = "50" required>
+           <span class = "requiredmarker">*</span>
+        </div>
+        <label for="other_name">Other name:</label>
+        <input type="text" name="other_name" id="other_name" size = "50" maxlength = "60" required >
+        <span class = "requiredmarker">*</span>
+     </fieldset>
+     
+     <fieldset id="preferredcontact">
+        <legend>Preferred Contact Method:</legend>
+        Mobile phone:
+        <input type="radio" name="contact_method" id="contactMobile" value="mobile">
+        &nbsp;&nbsp;Landline phone:
+        <input type="radio" name="contact_method" id="contactPhone" value="landline">
+        &nbsp;&nbsp;Email:
+        <input type="radio" name="contact_method" id="contactEmail" value="email" checked="checked">
+        <div class="popup" id = "contacthelp">
+           <p>Please select your preferred contact method.</p>
+        </div>
+     </fieldset>
+     
+     <fieldset id="formcontact">
+        <legend>Contact details</legend>
+        <div id ="mobilerow">
+           <label for="mobile">Mobile:</label>
+           <input type="text" name="mobile" id="mobile" size = "13" maxlength = "12" />
+           <span class = "requiredmarker" id = "mobilemarker">*</span>
+           <div class="popup" id = "mobilehelp">
+              Enter mobile number in following format:<br>
+              0[4 or 5]XX XXX XXX where X is a digit
+           </div>                           
+        </div>
+        <div id ="landlinerow">
+           <label for="landline">Landline:</label>
+           <input type="text" name="landline" id="landline" size = "13" maxlength = "13" />
+           <span class = "requiredmarker" id = "phonemarker">*</span>  
+           <div class="popup" id = "phonehelp">
+              Enter landline in following format:<br>
+              (0[2,3,6,7,8 or 9]) XXXXXXXX where X is a digit
+           </div>                               
+        </div>
+        <div id ="emailrow">
+           <label for="email">Email:</label>
+           <input type="email" name="email" id="email" size = "50" maxlength = "50"/>
+           <span class = "requiredmarker" id = "emailmarker">*</span>                             
+           <div class="popup" id = "emailhelp">
+              Please enter valid email address
+           </div>                               
+        </div>
+     </fieldset>
+     <script type = "text/javascript">
+   <!--
+    //turn off visibility of mobile and Landline (as email checked)
+    mobilemarker.style.visibility = "hidden";
+    phonemarker.style.visibility = "hidden";
+   -->
+</script>
+     <fieldset id="occupationlist">
+        <legend>Choose Your Occupation</legend>
+        <label for="occupation">Occupation:</label>
+        <select name="occupation" id = "occupation">
+           <option value="blank"></option>                        
+           <option value="Student">Student</option>
+           <option value="Manager">Manager</option>
+           <option value="Healthcare">Medical worker</option>
+           <option value="Trades">Trades worker</option>
+           <option value="Educator">Education</option>
+           <option value="Technician">Technician</option>
+           <option value="Clerical">Clerical worker</option>
+           <option value="Retail">Retail worker</option>
+           <option value="Researcher">Researcher</option>
+           <option value="Other">Other</option>
+        </select>
+        <span class = "requiredmarker">*</span>                        
+     </fieldset>
+ 
+     <fieldset id="formaddress">
+        <legend>Address:</legend>
+        <div id = "checkboxrow">
+           <input type="checkbox" name="magazine" id="magazine" value="yes" checked ="checked" />
+           Do you want to receive our monthly magazine?<br><br>
+        </div>   
+        <div id ="streetrow">
+            <label for="street">Street address:</label>
+            <input type="text" name="street" id="street" size = "50" maxlength = "50" />
+            <span class = "requiredmarker" id = "streetmarker">*</span>                              
+            <div class="popup" id = "streethelp">
+                Please enter house number and street address
+            </div>                                  
+        </div>
+        <div id ="suburbrow">
+            <label for="suburb">Suburb and State:</label>
+            <input type="text" name="suburb" id="suburb" size = "50" maxlength = "50" />
+            <span class = "requiredmarker" id = "suburbmarker">*</span>
+            <div class="popup" id = "suburbhelp">
+                Please enter suburb and state separated by comma:<br>
+                Suburb, State
+            </div>                                  
+        </div>                     
+        <div id ="postcoderow">
+            <label for="postcode">Postcode:</label>
+            <input type="text" name="postcode" id="postcode" size = "4" maxlength = "4"/>
+            <span class = "requiredmarker" id = "postcodemarker">*</span>                              
+            <div class="popup" id = "postcodehelp">
+                Please enter postcode maximum 4 digits
+            </div>                                  
+         </div>                                             
+     </fieldset>        
+
+     <fieldset id="usernamepwd"><legend>Username and Password:</legend>
+        <div id ="usernamerow">
+           <label for="username">Username:</label>
+           <input type="text" name="username" id="username" size = "14" maxlength = "10"/>
+           <span class = "requiredmarker">*</span>                           
+           <div class="popup" id = "usernamehelp">
+              Please enter username<br>minimum 6 characters - maximum 10 characters
+           </div>                               
+        </div>
+        <div id ="passwordrow">
+           <label for="password">Password:</label>
+           <input type="password" name="password" id="password" size = "15" maxlength = "10"/>
+           <span class = "requiredmarker">*</span>                           
+           <div class="popup" id = "passwordhelp">
+              10 characters maximum containing at minimum<br>one uppercase letter,<br>
+              one lowercase letter,<br>one number and<br>one special character<br> 
+              with no whitespace allowed
+           </div>                               
+        </div>                     
+        <div id ="verifypassrow">
+		   <label for="verifypass">Verify password:</label>
+           <input type="password" name="verifypass" id="verifypass" size = "15" maxlength = "40"/>
+           <span class = "requiredmarker">*</span>                           
+           <div class="popup" id = "verifypasshelp">
+              <p>Enter password again for verification</p>
+           </div>                               
+        </div>                     
+     </fieldset>                                                          
+            
+     <div id="formbuttons">
+        <input type="submit" name = "submit" id = "submit" value="Email submit"/>&nbsp;&nbsp;
+        <input type="reset" />
+     </div>
+  </form>
+  Privacy Notice: We take your privacy seriously and guarantee your data will not be shared with any third party.<br>
+<!-- Register event handlers -->
+<script type = "text/javascript" src = "scripts/register_form_events.js"></script>      </div>
+        <footer>    
+    Copyright &copy; 2020 - XYZ Video Library&nbsp;&nbsp;&nbsp;<span style="color:red">Note: This site requires JavaScript!</span><br>
+    A big thanks to 
+    the <a href="http://www.imdb.com/">Internet video Database (IMDb)</a> as that's were I 
+    "borrowed" most images from. 
+</footer>       </div>
+</body>
+<script type = "text/javascript">
+
+function sendEmail(){
+	// this function is used to generate the string of all values which 
+	// finally will be submitted to email.
+   var answerArr = [];
+   $("input, textarea").each(function(){       
+       if($(this).attr("type") === "radio"){            
+           if($(this).is(":checked")){
+              answerArr.push($(this).val());
+           }
+       }else{
+          answerArr.push($(this).val());       
+       }
+   });
+
+    var body = answerArr. ("\n");
+    var mailto = "whateveremail@gmail.com";
+
+    var a = document.createElement('a');
+    a.href = "mailto:" + mailto + "?body=" + escape(body);
+    console.log(a.href);
+    a.click();
+}
+
+$(document).on("click",".submit",sendEmail);
+</script>
+
+</html>

@@ -1,0 +1,84 @@
+<!-- 
+This page is used to get the contact us page 
+In this page you will see the information .
+Year and total input boxes are disabled for entry.
+while your can enter numeric value in quarter 1,quarter 2,quarter 3, and quarter 4.
+The sum of quarter 1,quarter 2,quarter 3, and quarter 4 will automatically be put in Total amount.
+A mathematical formula has been put in all the total input boxes.
+In this page you will get left and right panel showing some information. Hyperlinks and video are shown in this page.
+external custom css "Style.css" has been used in this page
+-->
+<!DOCTYPE html>
+<html lang = "en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+   <title>Video Library - Contact Us</title>
+   <meta charset = "utf-8" />
+   <link href = "css/style.css" rel = "stylesheet" type = "text/css" />      
+</head>
+<body>
+   <div id = "wrapper">    
+      <!-- following loads the navigation and sets the correct button as the current page -->
+      <header>
+   <img src = "imgs/dvd.jpg" alt = "Image of DVD" height = "125" width="250" />
+   <h1>Video Library - Contact Us</h1>     
+<nav>
+   <ul>
+      <li><a id ="indexNav" href = "index.html">Home</a></li>
+      <li><a id ="contactNav" href = "contact.html">Contact</a></li>
+      <li><a id ="profitNav" href = "profit.html?mode=salesreport">Profit Page</a></li>
+      <li><a id ="membershipNav" href = "membership.html">Membership</a></li>
+      </ul>
+</nav>  
+</header>       
+	<script type = "text/javascript">
+         document.getElementById("contactNav").className = "currentpage";  
+      </script> 
+      
+      <div id = "leftcol">
+         <h2> New Videos</h2>
+         <fieldset>
+       <legend>The Equalizer</legend>
+       <img class='videoPoster' src='imgs/videos/1436255761Equalizer.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Thriller<br>
+       <span class='videoHeading'>Director: </span>Antoine Fuqua<br>
+       <span class='videoHeading'>Classification: </span>MA<br>
+       <span class='videoBold'>Starring: </span>Denzel Washington, Marton Csokas, Chloe Grace Moretz and Bill Pullman.
+       <p><span class='videoBold'>What do you see when you look at me? </span></p>
+       <p>A man believes he has put his mysterious past behind him and has dedicated himself to beginning a new, quiet life. But when he meets a young girl under the control of ultra-violent Russian gangsters, he can't stand idly by - he has to help her.</p>
+       </fieldSet><br><br><fieldset>
+       <legend>Art & Copy</legend>
+       <img class='videoPoster' src='imgs/videos/1250756305ArtCopy.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Documentary<br>
+       <span class='videoHeading'>Director: </span>Doug Pray<br>
+       <span class='videoHeading'>Classification: </span>M<br>
+       <span class='videoBold'>Starring: </span>Mary Wells, Dan Wieden, and Hal Riney.
+       <p><span class='videoBold'> Definitely one for the Objectified set.</span></p>
+       <p>A documentary on some of the mavericks of modern American advertising.</p>
+       </fieldSet>      </div>
+      <div id = "rightcol">
+                  <h2>Contact Info for Video Library</h2> 
+         <img class="center"src = "imgs/dvd_VideoLibrary.jpg" width = "410" height = "135" 
+         alt = "Our extensive collection" title="Our extensive collection">
+         <p class="contactCentered">Come on down and view our collection</p>
+         <div id="contactBlock">
+            <label>Phone:</label> (07) 1234-5678<br>
+            <label>Address:</label> Southern Cross Drive<br>
+            <label>&nbsp;</label>Bilinga, Queensland 4225<br>
+            <label>Email:</label><a href="mailto:info@XYZVideoLibrary.com.au?subject=Direct from Video Library website">
+               info@XYZVideoLibrary.com.au</a><br>
+         </div>
+         <h2>Video Library location (Google Map)<h2>    
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7912.067602828965!2d153.5191550839386!3d-28.166652404406477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9101d962e68801%3A0xc00f29e5dbc48ba0!Holmes+Institure%2C+Gold+Coast+Campus!5e0!3m2!1sen!2sau!4v1555846915333!5m2!1sen!2sau" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>      
+      </div>
+         <footer>    
+    Copyright &copy; 2020 - XYZ Video Library&nbsp;&nbsp;&nbsp;<span style="color:red">Note: This site requires JavaScript!</span><br>
+    A big thanks to 
+    the <a href="http://www.imdb.com/">Internet video Database (IMDb)</a> as that's were I 
+    "borrowed" most images from. 
+</footer>        
+   </div>     
+</body>
+
+</html>

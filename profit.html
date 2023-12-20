@@ -1,0 +1,171 @@
+<!-- 
+This page is used to get the profit page 
+In this page you will get five rows of yearwise quarterwise sales data of a fixed video in a
+video library.
+Year and total input boxes are disabled for entry.
+while your can enter numeric value in quarter 1,quarter 2,quarter 3, and quarter 4.
+The sum of quarter 1,quarter 2,quarter 3, and quarter 4 will automatically be put in Total amount.
+A mathematical formula has been put in all the total input boxes.
+In this page you will get left and right panel showing some information. Hyperlinks and video are shown in this page.
+external custom css "Style.css" has been used in this page
+-->
+<!DOCTYPE html>
+<html lang = "en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title>Video Library - Profit Page</title>
+    <meta charset = "utf-8" />
+    <link href = "css/style.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+   <div id = "wrapper">    
+      <!-- following loads the navigation and sets the correct button as the current page -->
+      <header>
+   <img src = "imgs/dvd.jpg" alt = "Image of DVD" height = "125" width="250" />
+   <div id = "title-wrapper">    
+   <h1>Video Library - Profit Page</h1>     
+	</div>
+<nav>
+   <ul>
+      <li><a id ="indexNav" href = "index.html">Home</a></li>
+      <li><a id ="contactNav" href = "contact.html">Contact</a></li>
+      <li><a id ="profitNav" href = "profit.html?mode=salemsreport">Profit Page</a></li>
+      <li><a id ="membershipNav" href = "membership.html">membership</a></li>
+      </ul>
+</nav>  
+</header>       
+      <div id = "leftcol">
+         <h2> New Videos</h2>
+         <fieldset>
+       <legend>The Equalizer</legend>
+       <img class='videoPoster' src='imgs/videos/1436255761Equalizer.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Thriller<br>
+       <span class='videoHeading'>Director: </span>Antoine Fuqua<br>
+       <span class='videoHeading'>Classification: </span>MA<br>
+       <span class='videoBold'>Starring: </span>Denzel Washington, Marton Csokas, Chloe Grace Moretz and Bill Pullman.
+       <p><span class='videoBold'>What do you see when you look at me? </span></p>
+       <p>A man believes he has put his mysterious past behind him and has dedicated himself to beginning a new, quiet life. But when he meets a young girl under the control of ultra-violent Russian gangsters, he can't stand idly by - he has to help her.</p>
+       </fieldSet><br><br><fieldset>
+       <legend>Art & Copy</legend>
+       <img class='videoPoster' src='imgs/videos/1250756305ArtCopy.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Documentary<br>
+       <span class='videoHeading'>Director: </span>Doug Pray<br>
+       <span class='videoHeading'>Classification: </span>M<br>
+       <span class='videoBold'>Starring: </span>Mary Wells, Dan Wieden, and Hal Riney.
+       <p><span class='videoBold'> Definitely one for the Objectified set.</span></p>
+       <p>A documentary on some of the mavericks of modern American advertising.</p>
+       </fieldSet>      </div>
+      <div id="rightcol">  
+<h2>Profit Page</h2>  
+<form name="profitpage" action="">
+     <fieldset>
+	<table width="100%">
+	<tr>
+	<td class=header>Title<td>
+	<td class=header>Year<td>
+	<td class=header>1st Quarter<td>
+	<td class=header>2nd Quarter<td>
+	<td class=header>3rd Quarter<td>
+	<td class=header>4th Quarter<td>
+	<td class=header>Yearly Total<td>
+	</tr>
+	<tr>
+	<td class=Body1><input type="readonly" disabled value='The Equalizer'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Year" id="Year" type="text" disabled value='2020'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter1" id="Quarter1" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter1" id="Quarter2" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter1" id="Quarter3" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter1" id="Quarter4" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" type="readonly" name="total1" id="total1" disabled value='' ><td>
+	</tr>
+	<tr>
+	<td class=Body1><input type="readonly" disabled value='The Equalizer'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Year" id="Year" type="text" disabled value='2020'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter2" id="Quarter5" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter2" id="Quarter6" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter2" id="Quarter7" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter2" id="Quarter8" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" type="readonly" name="total2" id="total2" disabled value='' ><td>
+	</tr>
+	<tr>
+	<td class=Body1><input type="readonly" disabled value='The Equalizer'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Year" id="Year" type="text" disabled value='2020'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter3" id="Quarter9" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter3" id="Quarter10" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter3" id="Quarter11" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter3" id="Quarter12" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" type="readonly" name="total3" id="total3" disabled value='' ><td>
+	</tr>
+	<tr>
+	<td class=Body1><input type="readonly" disabled value='The Equalizer'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Year" id="Year" type="text" disabled value='2020'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter4" id="Quarter13" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter4" id="Quarter14" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter4" id="Quarter15" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter4" id="Quarter16" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" type="readonly" name="total4" id="total4" disabled value='' ><td>
+	</tr>
+	<tr>
+	<td class=Body1><input type="readonly" disabled value='The Equalizer'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Year" id="Year" type="text" disabled value='2020'><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter5" id="Quarter17" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter5" id="Quarter18" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter5" id="Quarter19" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" name="Quarter5" id="Quarter20" type="number" min="0" step="1" value='' onblur="javascript:findtotal();"><td>
+	<td class=Body1><input class=VeryNarrowField width="5%" type="readonly" name="total5" id="total5" disabled value='' ><td>
+	</tr>
+	</table>
+	 </fieldset>
+   </form>
+</div>
+    <footer>    
+    Copyright &copy; 2020 - XYZ Video Library&nbsp;&nbsp;&nbsp;<span style="color:red">Note: This site requires JavaScript!</span><br>
+    A big thanks to 
+    the <a href="http://www.imdb.com/">Internet video Database (IMDb)</a> as that's were I 
+    "borrowed" most images from. 
+</footer>    </div>
+</body>
+<script type = "text/javascript">
+
+function findtotal(){
+	//alert("hi");
+    var arr = document.getElementsByName('Quarter1');
+    var tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total1').value = tot;
+    arr = document.getElementsByName('Quarter2');
+    tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total2').value = tot;
+    arr = document.getElementsByName('Quarter3');
+    tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total3').value = tot;
+    arr = document.getElementsByName('Quarter4');
+    tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total4').value = tot;
+    arr = document.getElementsByName('Quarter5');
+    tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total5').value = tot;
+}
+</script>
+
+</html>

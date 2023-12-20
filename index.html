@@ -1,0 +1,111 @@
+<!-- 
+This page is used to get the home page of website.
+In this page you will get left and right panel showing some information. Hyperlinks and video are shown in this page.
+Student's photograph also has benn shown in this page in a placeholder.
+external custom css "Style.css" has been used in this page.
+-->
+<!DOCTYPE html>
+<html lang = "en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<div id = "title-wrapper">    
+	<title>Welcome - Video Library</title>
+	</div>    
+	<meta charset = "utf-8" />
+	<link href = "css/style.css" rel = "stylesheet" type = "text/css" />      
+	<script src="js/modernizr-1.5.js"></script>
+</head>
+<body>
+   <div id = "wrapper">    
+      <!-- following loads the navigation and sets the correct button as the current page -->
+      <header>
+   <img src = "imgs/dvd.jpg" alt = "Image of DVD" height = "125" width="250" />
+   <div id = "title-wrapper">    
+   <h1>Welcome - Video Library</h1>     
+	</div>
+<nav>
+   <ul>
+      <li><a id ="indexNav" href = "index.html">Home</a></li>
+      <li><a id ="contactNav" href = "contact.html">Contact</a></li>
+      <li><a id ="profitNav" href = "profit.html?mode=salesreport">Profit Page</a></li>
+      <li><a id ="membershipNav" href = "membership.html">Membership</a></li>
+      </ul>
+</nav>  
+</header>       
+	<script type = "text/javascript">
+         document.getElementById("indexNav").className = "currentpage";  
+    </script>
+      
+      <div id = "leftcol">
+         <h2>New Videos</h2>
+         <fieldset>
+       <legend>Edge of Tomorrow</legend>
+       <img class='videoPoster' src='imgs/videos/125075252edgeoftomorrow.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Action<br>
+       <span class='videoHeading'>Director: </span>Doug Liman<br>
+       <span class='videoHeading'>Classification: </span>M<br>
+       <span class='videoBold'>Starring: </span>Tom Cruise, Emily Blunt, Brendan Gleeson, Jonas Armstrong and Tony Way.
+       <p><span class='videoBold'>Live, Die, Repeat </span></p>
+       <p>A military officer is brought into an alien war against an extraterrestrial enemy who can reset the day and know the future. When this officer is enabled with the same power, he teams up with a Special Forces warrior to try and end the war.</p>
+       </fieldSet><br><br><fieldset>
+       <legend>Art & Copy</legend>
+       <img class='videoPoster' src='imgs/videos/1250756305ArtCopy.jpg' alt='video poster' height='150' width='105'>
+       <span class='videoHeading'>Genre: </span>Documentary<br>
+       <span class='videoHeading'>Director: </span>Doug Pray<br>
+       <span class='videoHeading'>Classification: </span>M<br>
+       <span class='videoBold'>Starring: </span>Mary Wells, Dan Wieden, and Hal Riney.
+       <p><span class='videoBold'> Definitely one for the Objectified set.</span></p>
+       <p>A documentary on some of the mavericks of modern American advertising.</p>
+       </fieldSet>      </div>
+      <div id = "rightcol">
+                  <h1>Welcome to the Video Library</h1>
+		  <div id = "expert_info">
+            <h4>Our IT Expert</h4>
+            <img src = "imgs/icon-profile.png" alt = "Our IT expert" height = "150" width = "153" />
+            <p id = "videotag">Student Name</p>
+         </div>        
+
+         <div class = "articleBody">
+            <p><span class="shopTitle">Video Library</span> is known for its high quality and customer service. We are 
+            dedicated to procuring he finest videos for our customers. 
+            DVD was the premier digital video storage medium of the 20th 
+            century, and now you too can enjoy the crisp visuals and clean audio of DVD as well as 
+            the improved quality of the 21st century's storage medium of choice BluRay.</p>
+         </div>
+		 <div class = "articleBody1">
+            <p>Our shop, conveniently located near Holmes Institute at the Gold Coast 
+            contains literally thousands of new and quality pre-loved DVDs and BluRays available 
+            for your viewing pleasure. Rent or purchase its up to you. Consider becoming a member as
+            this will allow you to book on-line and save you the disappointment of arriving only to 
+            find the video you were wishing to view or purchase is currently out of stock.</p>
+         </div>
+		 <div class = "articleBody">
+            <p>To become a member please click <a href="membership.html"><i>here</i></a>.</p>
+         </div>
+         <h4>Video</h4>
+		 <div class = "ariticlevideo">
+			<video width="320" height="240" controls autoplay>
+				<source src="sample.MP4" type="video/mp4">
+				Sorry, your browser doesn't support the video element.
+			</video>
+		 </div>
+         <h4>Audio</h4>
+		<div id="music">
+		   <audio>
+			  <source src="audio.ogg" />
+			  <source src="audio.mp3" />
+		   </audio>
+		   <button id="play">Play</button>
+		   <button id="pause">Pause</button>
+		</div>
+      </div>
+      <footer>    
+    Copyright &copy; 2020 - XYZ Video Library&nbsp;&nbsp;&nbsp;<span style="color:red">Note: This site requires JavaScript!</span><br>
+    A big thanks to 
+    the <a href="http://www.imdb.com/">Internet video Database (IMDb)</a> as that's were I 
+    "borrowed" most images from. 
+</footer>       </div>  
+</body>
+
+</html>
